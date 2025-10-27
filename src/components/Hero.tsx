@@ -60,7 +60,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
           >
             <a
-              href="https://calendly.com/hridxai/discovery-call"
+              href="https://calendly.com/hridyesh-gupta1206/new-meeting"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-200 hover:scale-105 flex items-center gap-2 group"

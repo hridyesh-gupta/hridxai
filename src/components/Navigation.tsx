@@ -65,7 +65,7 @@ const Navigation = () => {
 
             <div className="hidden md:block">
               <a
-                href="https://calendly.com/hridxai/discovery-call"
+                href="https://calendly.com/hridyesh-gupta1206/new-meeting"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-2.5 rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-200 hover:scale-105"
@@ -117,7 +117,7 @@ const Navigation = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: navLinks.length * 0.1 }}
-                  href="https://calendly.com/hridxai/discovery-call"
+                  href="https://calendly.com/hridyesh-gupta1206/new-meeting"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-3 rounded-full font-medium text-center hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-200"

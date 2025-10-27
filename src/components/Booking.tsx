@@ -104,7 +104,7 @@ const Booking = () => {
                 No commitment required.
               </p>
               <a
-                href="https://calendly.com/hridxai/discovery-call"
+                href="https://calendly.com/hridyesh-gupta1206/new-meeting"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-4 rounded-full font-semibold text-center hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-200 hover:scale-105"
@@ -128,7 +128,7 @@ const Booking = () => {
                 implementation roadmap. Refundable if you proceed with a project.
               </p>
               <a
-                href="https://calendly.com/hridxai/strategy-session"
+                href="https://calendly.com/hridyesh-gupta1206/new-meeting"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full glass-effect border border-emerald-400/30 text-emerald-400 px-6 py-4 rounded-full font-semibold text-center hover:bg-emerald-400/10 transition-all duration-200 hover:scale-105"

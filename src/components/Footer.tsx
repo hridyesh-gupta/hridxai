@@ -52,7 +52,7 @@ const Footer = () => {
                 <Github className="w-5 h-5 text-gray-400" />
               </a>
               <a
-                href="mailto:contact@hridxai.com"
+                href="mailto:contact@hridx.tech"
                 className="w-10 h-10 rounded-full glass-effect flex items-center justify-center hover:bg-white/10 transition-all duration-200 hover:scale-110"
                 aria-label="Email"
               >
@@ -150,15 +150,15 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:contact@hridxai.com"
+                  href="mailto:contact@hridx.tech"
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
-                  contact@hridxai.com
+                  contact@hridx.tech
                 </a>
               </li>
               <li>
                 <a
-                  href="https://calendly.com/hridxai/discovery-call"
+                  href="https://calendly.com/hridyesh-gupta1206/new-meeting"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-blue-400 transition-colors"
