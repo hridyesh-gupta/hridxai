@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
 import NeuralBackground from './NeuralBackground';
+import logo from '../../onlyLogo_final.png';
+import servicesDeck from '../../HridxAI Services Deck.pdf';
 
 const Hero = () => {
   const microDetails = [
@@ -8,13 +10,6 @@ const Hero = () => {
     'Fast deployment timelines',
     'Secure AI workflows',
   ];
-
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -28,7 +23,8 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 glass-effect rounded-full px-4 py-2 mb-8"
           >
-            <Sparkles className="w-4 h-4 text-blue-400" />
+            {/* <Sparkles className="w-4 h-4 text-blue-400" /> */}
+            <img src={logo} alt="HridxAI logo" className="w-8 h-8 object-contain" />
             <span className="text-sm text-gray-300">We craft solutions that convert.</span>
           </motion.div>
 
@@ -69,7 +65,7 @@ const Hero = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <button
-              onClick={() => scrollToSection('#services')}
+              onClick={() => window.open(`${servicesDeck}#zoom=40`, '_blank')}
               className="glass-effect px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-200 hover:scale-105"
             >
               Explore Our Services

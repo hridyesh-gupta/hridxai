@@ -1,4 +1,5 @@
-import { Sparkles, Twitter, Linkedin, Github, Mail } from 'lucide-react';
+import { Twitter, Linkedin, Github, Mail } from 'lucide-react';
+import logo from '../../onlyLogo_final.png';
 
 const Footer = () => {
   const scrollToSection = (href: string) => {
@@ -16,7 +17,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Sparkles className="w-6 h-6 text-blue-400" />
+              <img src={logo} alt="HridxAI logo" className="w-8 h-8 object-contain" />
               <span className="text-xl font-bold text-gradient">HridxAI</span>
             </div>
             <p className="text-gray-400 mb-6">
@@ -34,7 +35,7 @@ const Footer = () => {
                 <Twitter className="w-5 h-5 text-gray-400" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/hridyesh-gupta"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full glass-effect flex items-center justify-center hover:bg-white/10 transition-all duration-200 hover:scale-110"
@@ -43,7 +44,7 @@ const Footer = () => {
                 <Linkedin className="w-5 h-5 text-gray-400" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/hridyesh-gupta"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full glass-effect flex items-center justify-center hover:bg-white/10 transition-all duration-200 hover:scale-110"

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logo from '../../onlyLogo_final.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +48,7 @@ const Navigation = () => {
             }`}
           >
             <div className="flex items-center gap-2">
-              <Sparkles className="w-6 h-6 text-blue-400" />
+              <img src={logo} alt="HridxAI logo" className="w-8 h-8 object-contain" />
               <span className="text-xl font-bold text-gradient">HridxAI</span>
             </div>
 
