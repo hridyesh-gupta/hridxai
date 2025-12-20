@@ -1,13 +1,12 @@
 import { Twitter, Linkedin, Github, Mail } from 'lucide-react';
 import logo from '../../onlyLogo_final.png';
 
-const Footer = () => {
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+interface FooterProps {
+  onNavigate: (page: string) => void;
+  onSelectService: (service: 'automation' | 'marketing' | 'web' | 'design') => void;
+}
+
+const Footer = ({ onNavigate, onSelectService }: FooterProps) => {
 
   return (
     <footer className="relative py-16 border-t border-white/10">
@@ -26,7 +25,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://twitter.com"
+                href="https://x.com/hridyesh__hg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full glass-effect flex items-center justify-center hover:bg-white/10 transition-all duration-200 hover:scale-110"
@@ -67,7 +66,10 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <button
-                  onClick={() => scrollToSection('#services')}
+                  onClick={() => {
+                    onSelectService('automation');
+                    onNavigate('services');
+                  }}
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
                   AI Automation
@@ -75,26 +77,35 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('#services')}
+                  onClick={() => {
+                    onSelectService('marketing');
+                    onNavigate('services');
+                  }}
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
-                  Client Management
+                  Digital Marketing
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('#features')}
+                  onClick={() => {
+                    onSelectService('web');
+                    onNavigate('services');
+                  }}
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
-                  Voice AI Agents
+                  Website & App
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('#features')}
+                  onClick={() => {
+                    onSelectService('design');
+                    onNavigate('services');
+                  }}
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
-                  MVP Development
+                  Design & Branding
                 </button>
               </li>
             </ul>
@@ -105,7 +116,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <button
-                  onClick={() => scrollToSection('#home')}
+                  onClick={() => onNavigate('home')}
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
                   About Us
@@ -113,7 +124,7 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('#process')}
+                  onClick={() => onNavigate('features')}
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
                   Our Process
@@ -121,19 +132,29 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('#clients')}
+                  onClick={() => onNavigate('clients')}
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
-                  Case Studies
+                  Results
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('#booking')}
+                  onClick={() => onNavigate('contact')}
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
                   Contact
                 </button>
+              </li>
+              <li>
+                <a
+                  href="https://hridyesh.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                >
+                  About the founder
+                </a>
               </li>
             </ul>
           </div>
@@ -171,18 +192,18 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-center gap-4">
           <p className="text-gray-500 text-sm">
             &copy; {new Date().getFullYear()} HridxAI. All rights reserved.
           </p>
-          <div className="flex gap-6">
+          {/* <div className="flex gap-6">
             <a href="#" className="text-gray-500 hover:text-blue-400 transition-colors text-sm">
               Privacy Policy
             </a>
             <a href="#" className="text-gray-500 hover:text-blue-400 transition-colors text-sm">
               Terms of Service
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

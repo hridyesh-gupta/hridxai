@@ -6,13 +6,23 @@ const Clients = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const clients = [
-    { name: 'Nirvana Restaurant', logo: 'NR' },
-    { name: 'Prince Limousine', logo: 'PL' },
-    { name: 'Bhaktimay', logo: 'BM' },
-    { name: 'Royal Star Restaurant', logo: 'RS' },
+    { name: 'SPS Les Vergers', logo: 'SPS', url: 'https://readdy.link/preview/199dc748-0611-494c-a174-512e89cd425a/1674724' },
+    { name: 'Prince Limousine Cars', logo: 'PL', url: 'https://prince-car.vercel.app/' },
+    { name: 'Royal Star Restaurant', logo: 'RS', url: 'https://royal-star.ch/' },
+    { name: 'Google Developer Group-Prayagraj', logo: 'GDG', url: 'https://gdgprayagraj.com/' },
+    { name: 'Bhaktimay', logo: 'BM', url: 'https://www.bhaktimay.in/' },
+    { name: 'European Organization for Nuclear Research', logo: 'CERN', url: 'https://home.cern/' },
+    { name: 'Nirvana Restaurant', logo: 'NR', url: 'https://new.nirvana-geneve.ch/' },
+    { name: 'WikiClub Tech', logo: 'WCT', url: 'https://www.wikiclubtech.org/' },
+    { name: 'United Group of Institutions', logo: 'UGI', url: 'https://uitmap.com/' },
+    { name: 'Imani Food', logo: 'IF', url: 'https://imani-food.vercel.app/' },
+    { name: 'Devfest Prayagraj', logo: 'DP', url: 'https://devfest.gdgprayagraj.com/' },      
+    { name: 'La-Meyrinoise', logo: 'LM', url: 'https://la-meyrinoise.vercel.app/' },
+    { name: 'Meyrin-Vergers Pharmacy', logo: 'MV', url: 'https://meyrin-vergers.vercel.app/' },
+    { name: 'La-Voie Lactee', logo: 'LV', url: 'https://la-voie-lactee.vercel.app/' },
   ];
 
-  const duplicatedClients = [...clients, ...clients, ...clients];
+  const duplicatedClients = [...clients];
 
   return (
     <section id="clients" className="py-24 relative overflow-hidden">
@@ -26,11 +36,32 @@ const Clients = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            Trusted by <span className="text-gradient">Industry Leaders</span>
+            Results for <span className="text-gradient">Industry Leaders</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Delivering AI solutions that drive real business results
+            Delivering AI solutions that close more clients and grow recurring revenue.
           </p>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+            <div className="glass-effect rounded-2xl p-6 text-left">
+              <div className="text-4xl font-bold text-gradient mb-2">30+</div>
+              <p className="text-gray-300">
+                clients closed across restaurants, professional services, education, and more.
+              </p>
+            </div>
+            <div className="glass-effect rounded-2xl p-6 text-left">
+              <div className="text-4xl font-bold text-gradient mb-2">12+</div>
+              <p className="text-gray-300">
+                recurring clients using our monthly automation, marketing, and growth services.
+              </p>
+            </div>
+            <div className="glass-effect rounded-2xl p-6 text-left">
+              <div className="text-4xl font-bold text-gradient mb-2">27%</div>
+              <p className="text-gray-300">
+                average profit uplift companies see after implementing our systems.
+              </p>
+            </div>
+          </div>
         </motion.div>
 
         <motion.div
@@ -44,14 +75,14 @@ const Clients = () => {
 
           <motion.div
             animate={{
-              x: [0, -1920],
+              x: ['0%', '-70%'],
             }}
             transition={{
-              duration: 30,
+              duration: 60,
               repeat: Infinity,
               ease: 'linear',
             }}
-            className="flex gap-12 items-center"
+            className="flex gap-12 items-center w-max"
           >
             {duplicatedClients.map((client, index) => (
               <motion.div
@@ -59,14 +90,21 @@ const Clients = () => {
                 whileHover={{ scale: 1.1 }}
                 className="flex-shrink-0 group"
               >
-                <div className="glass-effect rounded-2xl p-8 w-64 h-32 flex flex-col items-center justify-center hover:bg-white/10 transition-all duration-300">
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 flex items-center justify-center mb-3 text-white font-bold text-xl group-hover:scale-110 transition-transform">
-                    {client.logo}
+                <a
+                  href={client.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div className="glass-effect rounded-2xl p-8 w-64 h-32 flex flex-col items-center justify-center hover:bg-white/10 transition-all duration-300">
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 flex items-center justify-center mb-3 text-white font-bold text-xl group-hover:scale-110 transition-transform">
+                      {client.logo}
+                    </div>
+                    <div className="font-semibold text-center text-gray-300 group-hover:text-white transition-colors">
+                      {client.name}
+                    </div>
                   </div>
-                  <div className="font-semibold text-center text-gray-300 group-hover:text-white transition-colors">
-                    {client.name}
-                  </div>
-                </div>
+                </a>
               </motion.div>
             ))}
           </motion.div>

@@ -26,22 +26,22 @@ const FAQ = () => {
     {
       question: 'How fast can we go live?',
       answer:
-        'Voice agents: typically 7–14 days. MVPs: 3–6 weeks (scope-dependent). We prioritize rapid deployment without compromising quality or security.',
+        'Voice agents take typically 7–14 days while rest of our services take 3–6 weeks depending upon the size of project. We prioritize rapid deployment without compromising quality or security.',
     },
     {
       question: 'Security & data?',
       answer:
         'We use clean, reviewable workflows and compliance-minded processes. You keep control of data and access. Bank-grade encryption and SOC 2 ready infrastructure.',
     },
-    {
-      question: 'Do you disclose pricing?',
-      answer:
-        'For projects, yes—see plans above. For ongoing ops, we tailor based on usage and outcomes. Transparent pricing with no hidden fees or surprise costs.',
-    },
+    // {
+    //   question: 'Do you disclose pricing?',
+    //   answer:
+    //     'For projects, yes—see plans above. For ongoing ops, we tailor based on usage and outcomes. Transparent pricing with no hidden fees or surprise costs.',
+    // },
     {
       question: 'What tech stacks do you support?',
       answer:
-        'CRM (HubSpot/Salesforce/Pipedrive, etc.), calendars, telephony/SIP, WhatsApp/SMS, helpdesks, and modern app infra. If you use it, we can integrate with it.',
+        'We generally support all tech stacks including CRM (HubSpot/Salesforce/Pipedrive, etc.), calendars, telephony/SIP, WhatsApp/SMS, helpdesks, and modern app infra. If you have any other tech stack, just let us know and we will try our best to integrate it.',
     },
   ];
 

@@ -2,43 +2,19 @@
 
 This React application can be deployed to various platforms. Here are the configurations and instructions for each:
 
-## 🚀 Quick Deploy Options
-
-### 1. Vercel (Recommended)
-- **Configuration**: `vercel.json` is already set up
-- **Steps**:
-  1. Push your code to GitHub
-  2. Connect your repository to Vercel
-  3. Vercel will automatically detect the React app and deploy
-
-### 2. Netlify
-- **Configuration**: `netlify.toml` is already set up
-- **Steps**:
-  1. Push your code to GitHub
-  2. Connect your repository to Netlify
-  3. Netlify will automatically build and deploy
-
-### 3. GitHub Pages
-- **Configuration**: `.github/workflows/deploy.yml` is already set up
-- **Steps**:
-  1. Push your code to GitHub
-  2. Go to repository Settings > Pages
-  3. Select "GitHub Actions" as source
-  4. The workflow will automatically deploy on every push to main
-
 ## 📦 Build Commands
 
 ```bash
-# Development
+# Check Development locally
 npm run dev
 
-# Production build
+# Production build locally
 npm run build
 
-# Production build with type checking and linting
+# Production build with type checking and linting (optional)
 npm run build:production
 
-# Preview production build locally
+# Preview production build locally (optional)
 npm run deploy:preview
 ```
 
@@ -48,12 +24,13 @@ If you need to deploy manually:
 
 1. **Build the project**:
    ```bash
-   npm run build:production
+   npm run build
    ```
 
-2. **Upload the `dist` folder** to your hosting provider
+2. **Upload/Replace the `dist` folder** to your hosting provider
 
-3. **Configure your server** to serve `index.html` for all routes (SPA routing)
+Even though only the dist folder will play the role in hosting, but it is recommended to upload the entire project to the hosting provider for backup purposes. Which can be done just uploading the file on github as CI/CD pipeline is set which can automatically deploy the code to hosting provider.
+
 
 ## 🌐 Environment Variables
 

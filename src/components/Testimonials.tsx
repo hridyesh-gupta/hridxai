@@ -37,52 +37,109 @@ const Testimonials = () => {
 
   const testimonials: Testimonial[] = [
     {
-      name: 'Sarah Johnson',
-      username: '@sarahj_tech',
+      name: 'Alex Martin',
+      username: 'SPS Les Vergers',
       content:
-        'HridxAI transformed our lead generation process. We went from manual outreach to fully automated qualification, and our conversion rate doubled in just 3 months.',
-      avatar: 'S',
+        'HridxAI automated our lead capture, follow-ups, and reminders. Phone and WhatsApp flows now run on autopilot, and our calendar stays full without us manually chasing every enquiry.',
+      avatar: 'A',
     },
     {
-      name: 'Michael Chen',
-      username: '@mchen_ceo',
+      name: 'Prince Rodríguez',
+      username: 'Prince Limousine Cars',
       content:
-        'The AI voice agents are incredible. They handle routine inquiries 24/7, freeing up our team to focus on high-value conversations. ROI was clear within weeks.',
+        'With the new website and booking system HridxAI built for us, most enquiries are handled instantly. Bookings sync automatically, and our team can focus on delivering a great ride.',
+      avatar: 'R',
+    },
+    {
+      name: 'Micco Stahel',
+      username: 'Nirvana Restaurant',
+      content:
+        'HridxAI gave us a modern website with integrated booking and automated reviews. We see more direct reservations and better repeat visits without extra marketing effort.',
+      avatar: 'P',
+    },
+    {
+      name: 'Rohan Mehta',
+      username: 'Bhaktimay',
+      content:
+        'Their digital marketing and automation stack manages our enquiries, WhatsApp conversations, and online sessions. Our team spends more time with students and less on admin work.',
+      avatar: 'R',
+    },
+    {
+      name: 'Michael Koch',
+      username: 'Royal Star Restaurant',
+      content:
+        'We combined a fresh web presence from HridxAI with automated follow-ups and feedback collection. Table occupancy and online orders have both increased without hiring more staff.',
+      avatar: 'A',
+    },
+    {
+      name: 'Vivek Kumar',
+      username: 'Google Developer Group-Prayagraj',
+      content:
+        'HridxAI helped us with event websites, registration funnels, and automated communication. Organising GDG Prayagraj events is smoother now because routine coordination is handled for us.',
+      avatar: 'V',
+    },
+    {
+      name: 'Marie Dubois',
+      username: 'European Organization for Nuclear Research',
+      content:
+        'Working with HridxAI on web and tooling upgrades helped us present complex programmes more clearly. Visitors and participants get a fast, reliable experience that reflects our standards.',
       avatar: 'M',
     },
     {
-      name: 'Emily Rodriguez',
-      username: '@emily_ops',
+      name: 'Ankit',
+      username: 'WikiClub Tech',
       content:
-        'Implementation was seamless. The team understood our workflows and built automation that actually fits how we work. No more forcing our processes into rigid software.',
-      avatar: 'E',
+        'Our community events, registrations, and outreach are much easier to manage now. HridxAI’s web and automation support keeps our members informed and engaged with far less manual work.',
+      avatar: 'K',
     },
     {
-      name: 'David Park',
-      username: '@davidp_founder',
+      name: 'Gaurav Gulati',
+      username: 'United Group of Institutions',
       content:
-        "Best decision we made this year. The MVP they built scaled from 10 to 1000 users without breaking. Clean architecture and transparent communication throughout.",
-      avatar: 'D',
+        'The digital experiences and integrations HridxAI built make it easier for students to discover programmes and stay updated. We finally have a setup that can grow with us.',
+      avatar: 'N',
     },
     {
-      name: 'Lisa Thompson',
-      username: '@lisathompson',
+      name: 'Imani K.',
+      username: 'Imani Food',
       content:
-        'Finally, an AI solution that delivers on its promises. The analytics dashboard gives us real-time insights we never had before. Data-driven decisions have never been easier.',
+        'Our new website and branding from HridxAI showcase our products beautifully. Orders are easier to capture and track, and we have a clear view of customers from first enquiry to repeat buys.',
+      avatar: 'I',
+    },
+    {
+      name: 'Aditya Jain',
+      username: 'Devfest Prayagraj',
+      content:
+        'For Devfest Prayagraj, the event website and automation flows handled registrations, reminders, and updates. The event felt much more organised and participation was higher than before.',
+      avatar: 'S',
+    },
+    {
+      name: 'Claire Moreau',
+      username: 'La-Meyrinoise',
+      content:
+        'HridxAI created a clean, modern digital presence for us. Our offer is easier to understand online, and we are seeing more inbound interest from local customers.',
+      avatar: 'C',
+    },
+    {
+      name: 'Dr. Lucas Meyer',
+      username: 'Meyrin-Vergers Pharmacy',
+      content:
+        'The clear and trustworthy web experience HridxAI built, plus simple automation, makes it easier for patients to find information and reach out. It reflects the level of care we aim to provide.',
       avatar: 'L',
     },
     {
-      name: 'James Wilson',
-      username: '@jwilson_tech',
+      name: 'Sophie Bernard',
+      username: 'La-Voie Lactee',
       content:
-        'Security was our biggest concern, and they exceeded expectations. Compliance-minded approach with complete transparency. We trust them with our most sensitive workflows.',
-      avatar: 'J',
+        'Our concept is now presented beautifully online. HridxAI gave us a strong brand and web foundation, and we feel ready to add more automation and growth campaigns on top.',
+      avatar: 'S',
     },
   ];
 
-  const column1 = testimonials.slice(0, 2);
-  const column2 = testimonials.slice(2, 4);
-  const column3 = testimonials.slice(4, 6);
+  const columnSize = Math.ceil(testimonials.length / 3);
+  const column1 = testimonials.slice(0, columnSize);
+  const column2 = testimonials.slice(columnSize, columnSize * 2);
+  const column3 = testimonials.slice(columnSize * 2);
 
   return (
     <section className="py-24 relative overflow-hidden">

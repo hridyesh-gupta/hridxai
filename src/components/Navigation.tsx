@@ -3,7 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import logo from '../../onlyLogo_final.png';
 
-const Navigation = () => {
+interface NavigationProps {
+  activePage: string;
+  onNavigate: (page: string) => void;
+}
+
+const Navigation = ({ activePage, onNavigate }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -16,20 +21,16 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Features', href: '#features' },
-    { name: 'Services', href: '#services' },
-    { name: 'Process', href: '#process' },
-    { name: 'Clients', href: '#clients' },
-    { name: 'Contact', href: '#booking' },
+    { name: 'Home', page: 'home' },
+    { name: 'Features', page: 'features' },
+    { name: 'Services', page: 'services' },
+    { name: 'Results', page: 'clients' },
+    { name: 'Contact', page: 'contact' },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
-    }
+  const handleNavigate = (page: string) => {
+    onNavigate(page);
+    setIsOpen(false);
   };
 
   return (
@@ -56,15 +57,27 @@ const Navigation = () => {
               {navLinks.map((link) => (
                 <button
                   key={link.name}
-                  onClick={() => scrollToSection(link.href)}
-                  className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm font-medium"
+                  onClick={() => handleNavigate(link.page)}
+                  className={`text-sm font-medium transition-colors duration-200 ${
+                    activePage === link.page
+                      ? 'text-blue-400'
+                      : 'text-gray-300 hover:text-blue-400'
+                  }`}
                 >
                   {link.name}
                 </button>
               ))}
             </div>
 
-            <div className="hidden md:block">
+            <div className="hidden md:flex items-center gap-4">
+              <a
+                href="https://hridyesh.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-effect px-4 py-2.5 rounded-full text-sm font-medium text-gray-200 hover:text-white hover:bg-white/10 transition-all duration-200"
+              >
+                About the founder
+              </a>
               <a
                 href="https://calendly.com/hridyesh-gupta1206/new-meeting"
                 target="_blank"
@@ -108,7 +121,7 @@ const Navigation = () => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    onClick={() => scrollToSection(link.href)}
+                    onClick={() => handleNavigate(link.page)}
                     className="text-gray-300 hover:text-blue-400 transition-colors text-left text-lg"
                   >
                     {link.name}
@@ -118,6 +131,17 @@ const Navigation = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: navLinks.length * 0.1 }}
+                  href="https://hridyesh.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-effect px-6 py-3 rounded-full font-medium text-center text-gray-200 hover:text-white hover:bg-white/10 transition-all duration-200"
+                >
+                  About the founder
+                </motion.a>
+                <motion.a
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: navLinks.length * 0.1 + 0.1 }}
                   href="https://calendly.com/hridyesh-gupta1206/new-meeting"
                   target="_blank"
                   rel="noopener noreferrer"

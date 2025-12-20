@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import NeuralBackground from './NeuralBackground';
 import logo from '../../onlyLogo_final.png';
-import servicesDeck from '../../HridxAI Services Deck.pdf';
 
-const Hero = () => {
+interface HeroProps {
+  onNavigate?: (page: string) => void;
+}
+
+const Hero = ({ onNavigate }: HeroProps) => {
   const microDetails = [
     'ROI-focused solutions',
     'Fast deployment timelines',
@@ -65,7 +68,16 @@ const Hero = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <button
-              onClick={() => window.open(`${servicesDeck}#zoom=40`, '_blank')}
+              onClick={() => {
+                if (onNavigate) {
+                  onNavigate('services');
+                } else {
+                  const element = document.querySelector('#services');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }
+              }}
               className="glass-effect px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-200 hover:scale-105"
             >
               Explore Our Services

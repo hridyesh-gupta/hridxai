@@ -64,20 +64,20 @@ const Booking = () => {
               </h4>
               <div className="space-y-3">
                 <a
-                  href="tel:+41767053502"
+                  href="tel:+41772908325"
                   className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>+41 767053502</span>
+                  <span>+41 772908325</span>
                 </a>
                 <a
-                  href="https://wa.me/41767053502"
+                  href="https://wa.me/41772908325?text=I%20am%20interested%20for%20your%20service"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>WhatsApp: +41 767053502</span>
+                  <span>WhatsApp: +41 772908325</span>
                 </a>
               </div>
             </div>
