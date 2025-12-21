@@ -2,10 +2,10 @@ import { useState } from 'react';
 import App from '../App';
 
 import video1 from '../../Video 1.mp4';
-import video2 from '../../Video 2.mp4';
-import video3 from '../../Video 3.mp4';
+// import video2 from '../../Video 2.mp4';`
+// import video3 from '../../Video 3.mp4';`
 
-const videos = [video1, video2, video3];
+const videos = [video1];
 
 const IntroWrapper = () => {
   const [showApp, setShowApp] = useState(false);
