@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import App from '../App';
 
 import video1 from '../../Video 1.mp4';
@@ -13,6 +13,14 @@ const IntroWrapper = () => {
     const index = Math.floor(Math.random() * videos.length);
     return videos[index];
   });
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowApp(true);
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, []);
 
   const handleEndOrError = () => {
     setShowApp(true);
